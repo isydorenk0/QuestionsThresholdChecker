@@ -6,11 +6,19 @@ package models;
  */
 public class ThresholdChecker {
 
-    private final double threshold;
+    private double threshold;
 
     public ThresholdChecker(double threshold) {
         if (threshold < 0) throw
                 new IllegalArgumentException("Threshold must be greater than or equal to zero");
+        this.threshold = threshold;
+    }
+
+    public double getThreshold() {
+        return threshold;
+    }
+
+    public void setThreshold(double threshold) {
         this.threshold = threshold;
     }
 
